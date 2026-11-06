@@ -1,0 +1,64 @@
+/*
+ * デザイントークン。色・文字・余白はここ以外で値を書かない。
+ * 文字色と背景色の組のコントラスト比は src/tokens.test.ts が 4.5:1 以上を検査する。
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --color-bg: #ffffff;
+  --color-surface: #f6f7f9;
+  --color-border: #c4cad4;
+  --color-text: #1a1d23;
+  --color-text-muted: #555d6b;
+  --color-accent: #1f5fbf;
+
+  --color-ok-fg: #1b6b3a;
+  --color-ok-bg: #e6f4ea;
+  --color-info-fg: #1f5fbf;
+  --color-info-bg: #e8f0fc;
+  --color-warn-fg: #7a4a00;
+  --color-warn-bg: #fff4e0;
+  --color-danger-fg: #b3261e;
+  --color-danger-bg: #fdecea;
+  --color-neutral-fg: #4a5160;
+  --color-neutral-bg: #eef0f3;
+
+  --font-sans: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --leading: 1.6;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #14161a;
+    --color-surface: #1d2026;
+    --color-border: #3a3f48;
+    --color-text: #e6e8eb;
+    --color-text-muted: #a3aab5;
+    --color-accent: #7fb0ff;
+
+    --color-ok-fg: #7fd49b;
+    --color-ok-bg: #16301f;
+    --color-info-fg: #7fb0ff;
+    --color-info-bg: #172a45;
+    --color-warn-fg: #f2c46d;
+    --color-warn-bg: #3a2a0c;
+    --color-danger-fg: #ff9a92;
+    --color-danger-bg: #3d1714;
+    --color-neutral-fg: #c0c6cf;
+    --color-neutral-bg: #262a31;
+  }
+}
