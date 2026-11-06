@@ -3,7 +3,7 @@
 | 層 | 中身 | 選べるか | ライセンス |
 |---|---|---|---|
 | リポジトリ | ツール、スキル定義、定跡、設定雛形、設計文書 | 選べる | Apache-2.0（[LICENSE](../LICENSE)） |
-| 配布物 | Paper + プラグイン束 + datapack | 選べない | Paper は GPL-3.0。束ねた全体にどこまで及ぶかは未確定 |
+| 配布物 | Paper + Velocity + プラグイン束 + datapack | 選べない | Paper と Velocity は GPL-3.0。束ねた全体にどこまで及ぶかは未確定 |
 | 第三者プラグイン | 個々の jar | 選べない | 個別 |
 
 Apache-2.0 を選んだのは特許条項があるため（MIT にはない）。
@@ -20,13 +20,15 @@ Paper の jar、パッチ、GPL 由来の設定をコミットすると、GPL-3.
 - 配布物の組み立てはデプロイ時に行う
 - リポジトリには自前のコードと文書だけを置く
 
+gateway に使う Velocity も [GPL-3.0](https://github.com/PaperMC/Velocity/blob/dev/4.0.0/LICENSE) なので、同じ扱いにする。
+
 ## Paper との関係
 
 フォークせず、NMS を使わず、`paper-api` にリンクするだけ。Paper は改変しない。
 
 ## 配布するときに行うこと
 
-Paper を同梱して配るときは、[GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt) の §4 と §6 に従って次を行う。
+Paper か Velocity を同梱して配るときは、[GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt) の §4 と §6 に従って次を行う。
 
 - 対応するソースの提供（または入手方法の明示）
 - ライセンス文と著作権表示の同梱
