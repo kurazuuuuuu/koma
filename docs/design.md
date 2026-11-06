@@ -83,7 +83,7 @@ image（digest で固定）  : JRE + OS
 | NMS | 禁止（静的検査で強制する予定） | バージョン跨ぎで壊れる。コンパイラは検出しない |
 | 世界状態の書き手 | 1本 | tick の締切は 50ms（[20 TPS の仕様値](https://minecraft.wiki/w/Tick)）で、複数の書き手の調整をこの時間に収められないと見ている |
 | 決定論の適用範囲 | `(seed, version, generatorconfig, datapacks)` の内側のみ | バージョン跨ぎは契約外 |
-| 本体の言語 | Rust（stable、Cargo） | 閉集合を `enum` と網羅的な `match` で、全域必須と未知のキーの拒否を serde で強制できる（[形式](#形式)）。ワークスペース分割と debug 情報の削減で、アプリ側の変更後の `cargo check` は 0.19 s、共有型の変更後の `cargo build` は 7.54 s `[計測: Apple M4 10コア 16GB, rustc 1.99.0, 合成コード（構造体 300 個、依存 255 クレート）, 2026-11-06]` |
+| 本体の言語 | Rust（stable、Cargo） | 閉集合を `enum` と網羅的な `match` で、全域必須と未知のキーの拒否を serde で強制できる（[形式](#形式)）。ビルド時間はワークスペース分割と debug 情報の削減で抑える |
 | プラグインの言語 | Java 25（Gradle Kotlin DSL） | [Paper の開発手順](https://docs.papermc.io/paper/dev/project-setup/)が Java 25 と Gradle Kotlin DSL を前提にしている |
 | V1 の範囲 | 1 つの koma で 1 コミュニティ | コミュニティ間の分離を設計せずに済み、検証の範囲を 1 コミュニティに絞れる |
 | ノード | 形式を最初から入れ、別ホストは V2 以降（[ノード](#ノード)） | 後から本体と Docker の間に境界を入れると、Docker を呼ぶ箇所をすべて直すことになる |
