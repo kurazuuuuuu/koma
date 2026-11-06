@@ -6,11 +6,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 現状
 
-実装がないリポジトリ。ビルド・lint・テストのコマンドは存在しない。実装が入ったら、実際に動かしたコマンドをここに書く。
+実装は `ui/`（UI の部品とトークン）だけ。本体とプラグインのビルド・lint・テストのコマンドはまだない。実装が入ったら、実際に動かしたコマンドをここに書く。
+
+`ui/` で実際に動かしたコマンド（Node 22、pnpm 10）:
+
+```sh
+cd ui
+pnpm install --frozen-lockfile
+pnpm test       # vitest
+pnpm typecheck  # vue-tsc
+pnpm lint       # eslint、警告も失敗
+pnpm build
+pnpm dev        # 部品の見本ページ
+```
 
 - 文書中の `koma` で始まる名前は現在形で書かれていても未実装。実行しない
 - koma の開発ではコンテナランタイムに OrbStack を使う
-- 本体とプラグインの言語は `docs/design.md` の「確定事項」。UI の言語は未決定（`docs/unknowns.md` の「未着手の設計」）なので、`.gitignore` の `.pnpm-store/` を決定として扱わず、実装前にユーザーに確認する
+- 本体・プラグイン・UI の言語は `docs/design.md` の「確定事項」。UI の部品を足すときは同じ文書の「デザインシステム」に従う
 
 ## 作業別の参照先
 
