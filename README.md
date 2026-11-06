@@ -47,4 +47,10 @@ AI エージェントが Minecraft サーバーの**開発から運用まで**�
 - [設計](docs/design.md)
 - [用語集](docs/glossary.md)
 - [分かっていないこと](docs/unknowns.md)
+- [ライセンス](docs/licensing.md)
 - [このリポジトリの書き方](AGENTS.md)
+
+## ライセンス
+
+このリポジトリは Apache-2.0。ただし **Paper を同梱した配布物は GPL-3.0** になる。
+詳細は [docs/licensing.md](docs/licensing.md)。

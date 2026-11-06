@@ -87,7 +87,8 @@ koma は**可逆性を設計に入れる**ので、戻せる。これが人間�
 ### 成果物ストア（蔵）
 
 - content-addressed。`store/v1/<sha[0:2]>/<sha[2:4]>/<sha>.jar` + `.meta.json`
-- `koma-lock.yaml` に `provides`（コマンド・権限）と `shaded`（同梱ライブラリ）を持つ
+- `koma-lock.yaml` に `provides`（コマンド・権限）と `shaded`（同梱ライブラリ）と
+  `license` / `redistributable`（配布可否）を持つ
 - **ロールバック = ポインタ交換**（数 ms）→ 自律性の上限が上がる
 - 取れないもの: 依存解決・隔離（Paper に概念が無い）
   → 代わりに**静的解析で衝突を検出して失敗させる**
