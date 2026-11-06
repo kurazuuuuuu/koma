@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build
+dist/
+build/
+out/
+target/
+*.class
+.gradle/
+.idea/
+
+# runtime
+.run/
+logs/
+*.log
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# os
+.DS_Store
